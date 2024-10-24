@@ -41,7 +41,7 @@ jobs:
       - name: Failed ! Revert changes
         if: failure()
         run: |
-          git reset dev HEAD:{1}
+          git reset dev HEAD^1
           git push
 
       # Runs a set of commands using the runners shell
