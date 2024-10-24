@@ -30,6 +30,18 @@ jobs:
       - name: Running tests
         run: python test_game.py
 
+      - name: Fast forward main
+        if: success()
+        run: |
+          git checkout main
+          git merge dev --ff
+
+      - name: Failed ! Revert changes
+        if: failure()
+        run: |
+          git checkout HEAD:{1}
+          git reset --hard
+
       # Runs a set of commands using the runners shell
       # - name: Run a multi-line script
       #   run: |
