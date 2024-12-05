@@ -7,5 +7,3 @@ Pour réaliser les tests unitaires, exécuter la commande suivante :
 > ```bash
 > python test_game.py
 > ```
-
-oui
