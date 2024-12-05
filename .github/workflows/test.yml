@@ -36,7 +36,7 @@ jobs:
           git fetch origin
           git checkout main
           git merge dev --ff-only --allow-unrelated-histories
-          git push main
+          git push origin main
 
       - name: Failed ! Revert changes
         if: failure()
