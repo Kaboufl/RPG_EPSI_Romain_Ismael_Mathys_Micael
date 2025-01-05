@@ -36,7 +36,6 @@ class TestRPGGame(unittest.TestCase):
         self.player1.attack(self.player2, "coup critique")  
         self.player1.attack(self.player2, "coup rapide")   
         self.assertEqual(self.player2.hp, 0)
-        self.assertEqual(self.player2.hp <= 0, True)  
 
 if __name__ == "__main__":
     unittest.main()
