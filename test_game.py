@@ -26,6 +26,10 @@ class TestRPGGame(unittest.TestCase):
         self.player1.attack(self.player2, "mauvaise attaque")
         self.assertEqual(self.player2.hp, 4)  
 
+        # Intentionnal error to test the CI
+        self.player1.attack(self.player2, "coup critique")
+        self.assertEqual(self.player2.hp, 3)
+
     def test_death(self):
         self.player1.attack(self.player2, "coup critique") 
         self.player1.attack(self.player2, "coup critique")  
